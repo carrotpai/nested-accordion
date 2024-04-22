@@ -19,10 +19,8 @@ export const Accordion = ({ children, title, background }: ICaptionWrapperProps)
     addNode?.(isOpen ? scrollHeight : 0, scrollHeight);
   }, []);
 
-
   //Получение id и высоты в пикселях для нода данного аккордиона
   const { height, id: dataId } = getNode();
-
 
   function handleClick() {
     setIsOpen(open => !open);
