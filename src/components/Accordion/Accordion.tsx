@@ -28,6 +28,7 @@ export const Accordion = ({ children, title, background }: ICaptionWrapperProps)
       console.warn("accordionId wasn't set");
       return;
     }
+
     //текущий нод
     const node = accordionNodes.get(accordionId.current);
     if (!node) throw new Error(`HandleClick: node wasn't created fot given id: ${accordionId.current}`);
@@ -44,6 +45,7 @@ export const Accordion = ({ children, title, background }: ICaptionWrapperProps)
         parentNode.currentHeight += heightDiff;
       }
     });
+
     //увеличить версию дерева, чтобы произвести ререндер всего, что лежит внутри контектста
     increaseVersion?.();
   }
